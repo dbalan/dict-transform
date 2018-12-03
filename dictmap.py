@@ -20,7 +20,10 @@ def lookup_number(conn, num):
         return row[0]
 
 if __name__ == "__main__":
+    hexstr = "7950f5369c531e869dfac8c9642eba945532715bb638936b8a80b605b2f1090e"
+    print(f'HEXSTR: {hexstr}')
+
     print("WORDS: ", end=" ")
-    for tw in wordmap("7950f5369c531e869dfac8c9642eba945532715bb638936b8a80b605b2f1090e", "example.db"):
+    for tw in wordmap(hexstr, "example.db"):
         print(tw, end=" ")
     print("")
